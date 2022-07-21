@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>All git repositories</h1>
+{% for repo in object_list %}
+<ul>
+    <li>Repo name: {{ repo.full_name }}</li>
+    <li>Description: {{ repo.description }}</li>
+    <li><a href="{{ repo.site_url }}">{{ repo.site_url }}</a></li>
+    <li>Stars: {{ repo.stars }}</li>
+    <li>Forks: {{ repo.forks }}</li>
+    <li>Watching: {{ repo.watching }}</li>
+    <li>Commits: {{ repo.commits }}</li>
+    <li>Releases: {{ repo.releases }}</li>
+</ul>
+{% endfor %}
+</body>
+</html>
